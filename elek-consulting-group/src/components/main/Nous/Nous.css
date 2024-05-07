@@ -1,0 +1,24 @@
+.Nous{
+    
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    padding-bottom: 20px;
+}
+.Nous h3{
+    text-align: center;
+    padding-top: 30px;
+    margin: 10px;
+}
+.Nous p{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.addcell{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+}

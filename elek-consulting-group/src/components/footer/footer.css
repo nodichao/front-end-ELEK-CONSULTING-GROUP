@@ -1,0 +1,60 @@
+.footer{
+    /*position: relative;
+    bottom: 0;*/
+    width: 100%;
+    background-color: black;
+    margin-top: 15px;
+}
+
+.footWrapper{
+    margin: 0.5%;
+    padding: 2%;
+}
+
+.footWrapper #copyright {
+    color: white;
+    position: absolute;
+    bottom: 0%;
+     left: 50%;
+     transform: translate(-50%, 40%);
+}
+
+.footLogo img{
+   display: inline-block;
+   width: 25%;
+   height: 25%;
+}
+.footLogo{
+    text-align: center;
+}
+.footLogo p{
+    color: white;
+}
+.footList{
+    color: white;
+    vertical-align: top;
+    margin-left: 15%;
+    width: 50%;
+}
+.footList ul{
+   margin: 0;
+    padding: 0;
+   display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 10px;
+  gap: 5%;
+  
+}
+.footList ul li{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    padding: 15px 10px;
+}
+.footLogo,.footList{
+    display: inline-block;
+}
+.footContent{
+    
+    margin-bottom: 100px;
+}

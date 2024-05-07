@@ -1,0 +1,64 @@
+.inscription{
+    
+    height: 550px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.myForm2{
+    
+    height: 100%;
+    width: 70%;
+    margin: 0 auto;
+    
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 10px 10px 20px;
+}
+
+.myForm2 img:nth-child(1){
+    display: inline-block;
+    vertical-align: middle;
+}
+.myForm2 p span{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.myForm2 input{
+    width: 70%;
+    height: 25px;
+    
+}
+h2{
+    
+    text-align: center;
+   
+}
+
+.inner-myform2{
+    
+    display: flex;
+    padding-left: 15%;
+    justify-content: center;
+    font-weight: bold;
+}
+.Ibutton{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.Ibutton button{
+    width: 25%;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: black;
+    font-family: 'Maven Pro';
+    font-size: 18px;
+    color: #EAEE11;
+
+}
+.inner-myform2 div{
+    
+    width: 50%;
+}

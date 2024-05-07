@@ -1,0 +1,100 @@
+.connexion{
+    margin: 1%;
+    display: flex;
+    justify-content: center;
+}
+
+.myForm{
+    height: 600px;
+    width: 70%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    box-shadow: 10px 10px 20px;
+    display: flex;
+    justify-content: flex-start;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-bottom: 30px;
+}
+
+.inner-form1{
+    position: relative;
+    background-color: #EAEE11;
+    height: 100%;
+    width: 50%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px; 
+}
+.inner-form1 img:nth-child(1){
+    display: inline-block;
+    vertical-align: middle;
+}
+.inner-form1 p span{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+
+.inner-form1 img:nth-child(2){
+  display: inline-block;
+  position: absolute;
+  padding-left: 20%;
+  left: 50%;
+  top: 53%;
+  transform: translate(-50%,-50%);
+  width: 350px;
+  height: 350px;
+}
+.inner-form2{
+    background-color: white;
+    height: 100%;
+    width: 50%;
+    
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px; 
+}
+
+.inner-form2 h2{
+    text-align: center;
+    margin-top: 100px;
+}
+
+.inner-form2 div:nth-child(1),.inner-form2 div:nth-child(2){
+    margin-top: 70px;
+    padding-left: 5%;
+}
+
+form input{
+    width: 75%;
+    height: 30px;
+}
+
+.inner-form2 div:nth-child(1) input{
+    margin-left: 6%;
+}
+
+form div:nth-child(3){
+    display: flex;
+    margin-top: 40px;
+    flex-direction: column;
+    align-items: center;
+    
+}
+form button{
+    margin: 15px auto;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    width: 35%;
+    font-weight: bold;
+    border-radius: 5px;
+}
+form a{
+    color: black;
+    
+}
+
+form label{
+    font-weight: bold;
+}

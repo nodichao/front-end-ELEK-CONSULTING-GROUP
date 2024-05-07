@@ -1,0 +1,67 @@
+.inner-blog1,.inner-blog2{
+    /*border: 1px solid black;*/
+    
+}
+.inner-blog1{
+    width: 76%;
+    /*border: 5px solid red;*/
+}
+.inner-blog2{
+    width: 24%;
+    margin-left: 1%;
+    padding-top: 30px;
+}
+.inner-blog2 h3{
+    margin-bottom: 0;
+}
+
+.inner-blog2 h4,.inner-blog2 p{
+    margin: 0;
+}
+
+.inner-blog2 h4{
+    font-family: 'Maven Pro';
+}
+
+.inner-blog2 div{
+    margin: 5% auto;
+}
+.inner-blog1 h3{
+    margin-bottom: 0;
+    /*border: 1px solid red;*/
+}
+.Blog{
+    display: flex;
+}
+
+.BImage{
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+}
+.BImage img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.BArticle1 h2{
+    text-align: left;
+    font-family: 'Maven Pro';
+}
+.BArticle1{
+    
+    height: auto;
+    /*overflow: auto;*/
+    /*border: 5px solid blueviolet;*/
+}
+.BInteractions img{
+    display: inline-block;
+    margin: 0 1%;
+    width: 30px;
+    height: 30px;
+}
+
+.BInteractions{
+   /* border: 1px solid black;*/
+}

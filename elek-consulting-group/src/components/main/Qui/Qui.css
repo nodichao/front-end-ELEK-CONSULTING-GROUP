@@ -1,0 +1,40 @@
+.Qui{
+    background-color: #FFFFFF;
+    border-radius: 5px;
+}
+.Qui h3{
+    text-align: center;
+    padding-top: 30px;
+    margin: 10px;
+}
+
+
+.desc1 button{
+    display: block;
+    margin: 0 auto;   
+    padding: 5px;
+    width: 20%;
+    background-color: #000000;
+     font-family:'Maven Pro';
+     color: white;
+     height: 35px;
+     border-radius:5px ;
+     font-weight: bold;
+     
+}
+.desc1 p{
+    max-height: 40%;
+    overflow: hidden;
+    text-align: justify;
+}
+
+.desc1{
+    margin-left: 8%;
+}
+.desc1,.desc2{
+    width: 40%;
+}
+.description{
+    display: flex;
+    justify-content: space-around;
+}

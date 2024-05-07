@@ -1,0 +1,80 @@
+.banner{
+    
+    background-image: url('/public/banner1.jpeg');
+    background-color: rgba(255, 255, 255, 0.5);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 300px;
+    animation-name: changeBackground;
+    animation-duration: 5s; 
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; 
+ }
+
+ @keyframes changeBackground {
+    0% { background-image: url('/public/banner1.jpeg'); }
+    50% { background-image: url('/public/banner2.jpg'); }
+    100% { background-image: url('/public/banner1.jpeg'); }
+}
+
+ .banner::before{
+   content: "";
+   position: absolute;
+   top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   backdrop-filter: blur(4px) brightness(70%) grayscale(50%);
+ }
+ .title{
+     
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -70%);
+     
+ }
+ h1{
+     /*border : 1px solid yellow;*/
+     color: yellow;
+     font-size: 40px;
+     margin-bottom: 30px;
+ }
+
+ .bTitle button{
+    padding: 3px;
+    margin: 3px;
+ }
+ 
+ .bTitle{
+    
+     text-align: center;
+     
+ }
+ 
+ .bTitle button:nth-child(1){
+     background-color: #EAEE11;
+     font-family:'Maven Pro';
+     height: 35px;
+     border-radius:5px ;
+     font-weight: bold;
+ }
+ 
+ .bTitle button:nth-child(2){
+     background-color: #000000;
+     font-family:'Maven Pro';
+     color: white;
+     height: 35px;
+     border-radius:5px ;
+     font-weight: bold;
+     
+ }
+ 
+ button{
+     /*margin: 2px;*/
+     cursor: pointer;
+ }
+ 
+ 

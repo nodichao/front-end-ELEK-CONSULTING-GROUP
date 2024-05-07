@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap');
+.App{
+    border-color: 1px solid goldenrod;
+    position: relative;
+    font-family:'Maven Pro';
+    padding: 0 0.6%;
+}
