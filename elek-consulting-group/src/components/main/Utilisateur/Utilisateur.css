@@ -6,6 +6,20 @@
     margin: 0 4%;
     /*border: 1px solid red;*/
 }
+
+/*.logout{
+    border: 1px solid red;
+    position: absolute;
+    border-radius: 50%;
+    background-color: red;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%,0);
+    text-align: center;
+    
+}*/
+
+
 .Uheader{
     /*border: 1px solid black;*/
     height: 200px;
@@ -66,6 +80,7 @@
     border-radius: 10px;
     height: 80%;
     margin-top: 5px;
+    position: relative;
 }
 
 .Unav ul img{

@@ -1,8 +1,67 @@
-import { Link } from "react-router-dom";
+import { Link,Navigate } from "react-router-dom";
 import { Footer } from "../footer/Footer";
+import { useState } from "react";
 //import "./Connexion.css";
 
 export function Connexion() {
+
+  const [redirectToHome, setRedirectToHome] = useState(false);
+
+  const submitHandler = async(e)=>{
+    e.preventDefault();
+    const form = document.getElementById('LForm');
+    const loginError = document.getElementById('loginError');
+    const passError = document.getElementById('passError');
+   
+
+   
+    
+   
+   const login = form.login.value;
+   const pass = form.pass.value;
+   
+   
+   try {
+        const response = await fetch('http://localhost:5000/api/login', {
+        method: 'POST',
+        credentials: 'include',
+        body: JSON.stringify({ email:login, password:pass }),
+        headers: { 'Content-Type': 'application/json' }
+      });
+    
+      
+      if (!response.ok) {
+         //throw new Error('La requête a échoué : ' + response.status);
+         const err= await response.json()
+         throw err;
+      }
+    
+      
+      console.log('La requête a réussi !');
+      const data = await response.json();
+      console.log(data);
+      setRedirectToHome(true);
+    } catch (err) {
+      //console.log(err);
+      function stylingFunction(element){
+       element.style.fontSize="15px";
+       element.style.color='red';
+       element.style.fontFamily='Maven Pro';
+       //element.style.position ="absolute";
+       return element;
+      }
+      console.error('Erreur lors de la requête :', err);
+      loginError.innerText = err.email;
+      passError.innerText = err.password;
+      
+      stylingFunction(loginError);
+      stylingFunction(passError);
+    }
+  }
+  if(redirectToHome){
+    return <Navigate to="/user"/>
+  }
+
   return (
     <>
       <main id="main" className="main">
@@ -18,17 +77,23 @@ export function Connexion() {
             </div>
             <div className="inner-form2">
               <h2>Connectez vous !</h2>
-              <form>
+              <form id="LForm">
                 <div>
                   <label>Login</label>
-                  <input type="email" placeholder="exemple@gmail.com" />
+                  <input type="email" placeholder="exemple@gmail.com" name="login"/>
+                  <div id="loginError">
+
+                  </div>
                 </div>
                 <div>
                   <label>Password</label>
-                  <input type="password" placeholder="********" />
+                  <input type="password" placeholder="********" name="pass" />
+                  <div id="passError">
+
+                  </div>
                 </div>
                 <div>
-                  <button>connexion</button>
+                  <button onClick={submitHandler}>connexion</button>
                   <a href="/#">Mot de passe oublié ?</a>
                 </div>
               </form>
