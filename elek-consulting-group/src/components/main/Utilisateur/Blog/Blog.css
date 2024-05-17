@@ -3,10 +3,12 @@
     
 }
 .inner-blog1{
-    width: 76%;
+    width: 90%;
+    height: auto;
+    /*border: 1px solid red;*/
     /*border: 5px solid red;*/
 }
-.inner-blog2{
+/*.inner-blog2{
     width: 24%;
     margin-left: 1%;
     padding-top: 30px;
@@ -25,13 +27,14 @@
 
 .inner-blog2 div{
     margin: 5% auto;
-}
+}*/
 .inner-blog1 h3{
     margin-bottom: 0;
     /*border: 1px solid red;*/
 }
 .Blog{
     display: flex;
+    /*border: 1px solid black;*/
 }
 
 .BImage{
@@ -52,6 +55,9 @@
 .BArticle1{
     
     height: auto;
+    margin-bottom: 50px;
+    padding-left: 2%;
+    /*border: 1px solid blue;*/
     /*overflow: auto;*/
     /*border: 5px solid blueviolet;*/
 }
@@ -60,8 +66,9 @@
     margin: 0 1%;
     width: 30px;
     height: 30px;
+    cursor: pointer;
 }
 
 .BInteractions{
-   /* border: 1px solid black;*/
+    /*border: 1px solid black;*/
 }

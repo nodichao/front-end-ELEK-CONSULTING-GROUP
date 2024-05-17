@@ -2,17 +2,29 @@
 import "./Utilisateur.css";
 //import {Blog} from './Blog/Blog';
 import { useEffect, useState } from "react";
-import { Outlet, Link, useLocation,Navigate } from "react-router-dom";
+import { Outlet, Link, useLocation,Navigate, useParams } from "react-router-dom";
 //import { useEffect, useState } from "react";
 //import { height, width } from "@fortawesome/free-solid-svg-icons/fa0";
 
 export function Utilisateur() {
+  
+  
+  //console.log(data);
   const [redirectToHome, setRedirectToHome] = useState(false);
+  let user = localStorage.getItem('user');
+   let userObject = JSON.parse(user);
+   //console.log(userObject);
   useEffect(() => {
     document.getElementById("navigation").style.display = "none";
   }, []);
   const location = useLocation();
-
+  //const data = location.state?.data;
+  //console.log(data);
+  //console.log(data);
+  //const {id}= useParams();
+  //console.log(document.cookie);
+  
+  //console.log(id);
   const logoutHandler = async () => {
     try {
       const response = await fetch("http://localhost:5000/api/user_logout", {
@@ -26,14 +38,19 @@ export function Utilisateur() {
         throw err;
       }
 
-      console.log("La requête a réussi !");
+      console.log("La deconnexion a réussi !");
+      
       const data = await response.json();
       console.log(data);
+      userObject= null;
+      console.log(userObject);
+      localStorage.clear();
       setRedirectToHome(true);
     } catch (err) {
       console.error("Erreur lors de la requête :", err);
     }
   }
+  
 
   if(redirectToHome){
     document.getElementById("navigation").style.display = "block";
@@ -66,7 +83,7 @@ export function Utilisateur() {
                 className="Ppicture"
               />
             </div>
-            <p>Joe NODICHAO</p>
+            <p>{userObject.firstName} {userObject.lastName}</p>
           </div>
           <nav>
             <ul>
@@ -133,7 +150,10 @@ export function Utilisateur() {
         </div>
         <div className="Ucontent" id="Ucontent">
           <div className="inUContent" id="inUContent">
-            <Outlet></Outlet>
+            { userObject &&
+                 <Outlet></Outlet>
+            }
+           
           </div>
         </div>
       </main>

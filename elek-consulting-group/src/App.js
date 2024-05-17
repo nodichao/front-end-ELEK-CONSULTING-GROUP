@@ -1,5 +1,6 @@
 //import{Footer} from './components/footer/Footer'
 import { Outlet } from 'react-router-dom';
+
 import './App.css';
 
 import "./components/Connexion/Connexion.css";
@@ -13,6 +14,7 @@ function App() {
     <>
       <Header></Header>
       <Outlet></Outlet>
+      
     </>
   );
 }

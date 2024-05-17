@@ -10,6 +10,13 @@ import {Inscription} from'./components/Inscription/Inscription';
 import { Main } from "./components/main/Main";
 import { Utilisateur } from "./components/main/Utilisateur/Utilisateur";
 import { Blog } from "./components/main/Utilisateur/Blog/Blog";
+import { Parametres } from "./components/main/Utilisateur/Parametres/Parametres";
+import { Canevas } from "./components/main/Utilisateur/Canevas/Canevas";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { RDVs } from "./components/main/Utilisateur/RDVs/RDVs";
+
+
 
 
 const router = createBrowserRouter([
@@ -32,20 +39,20 @@ const router = createBrowserRouter([
         element:<Utilisateur/>,
         children:[
           {
-            path:'/user/Blog',
+            path:'Blog',
             element:<Blog/>
           },
           {
-            path:'/user/Canevas',
-            element:<p>Page Canevas</p>
+            path:'Canevas',
+            element:<Canevas/>
           },
           {
-            path:'/user/RDV',
-            element:<p>Page Rdvs</p>
+            path:'RDV',
+            element:<RDVs/>
           },
           {
-            path:'/user/Parametres',
-            element:<p>Page parametres</p>
+            path:'Parametres',
+            element:<Parametres/>
           },{
             path:'/user/*',
             element:<Navigate to='/user/Blog' replace/>
@@ -58,7 +65,9 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
+      <ToastContainer></ToastContainer>
     <RouterProvider router={router}/>
+
   </React.StrictMode>
 );
 

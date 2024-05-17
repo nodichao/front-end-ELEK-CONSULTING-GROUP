@@ -1,0 +1,11 @@
+.canevas{
+    /*border: 1px solid red;*/
+    padding: 0 5%;
+}
+.inner-canevas{
+    /*border: 1px solid black;*/
+    margin: 0 1%;
+}
+.all-canevas{
+    display: flex;
+}

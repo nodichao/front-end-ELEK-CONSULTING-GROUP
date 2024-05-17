@@ -6,7 +6,8 @@ import { useState } from "react";
 export function Connexion() {
 
   const [redirectToHome, setRedirectToHome] = useState(false);
-
+  const [data, setData] = useState(null);
+  
   const submitHandler = async(e)=>{
     e.preventDefault();
     const form = document.getElementById('LForm');
@@ -38,9 +39,11 @@ export function Connexion() {
     
       
       console.log('La requête a réussi !');
-      const data = await response.json();
-      console.log(data);
+       const responseData = await response.json();
+       //console.log(responseData);
+       setData(responseData);
       setRedirectToHome(true);
+      
     } catch (err) {
       //console.log(err);
       function stylingFunction(element){
@@ -58,8 +61,10 @@ export function Connexion() {
       stylingFunction(passError);
     }
   }
+  
   if(redirectToHome){
-    return <Navigate to="/user"/>
+    localStorage.setItem('user',JSON.stringify(data));
+    return <Navigate to={`/user`} />
   }
 
   return (

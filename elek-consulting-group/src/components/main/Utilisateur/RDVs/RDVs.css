@@ -1,0 +1,46 @@
+.RDVs{
+    /*border: 1px solid #ff0000;*/
+    padding-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Maven Pro';
+}
+.inner-rdv1{
+    width: 40%;
+    /*border: 1px solid black;*/
+    padding: 3%;
+}
+.inner-rdv2{
+    width: 40%;
+    /*border: 1px solid black;*/
+    border-radius: 15px;
+    padding: 3%;
+}
+.inner-rdv2 th,.inner-rdv2 tr,.inner-rdv2 td{
+    border: 1px solid black;
+
+}
+#appointmentForm div:nth-child(1) input{
+    width:5%;
+    height: 5%;
+}
+
+#appointmentForm div:nth-child(2) input{
+    width: 25%;
+}
+#appointmentForm div:nth-child(3) {
+    display: block;
+}
+
+#appointmentForm div:nth-child(3) input{
+    width: 25%;
+}
+
+#appointmentForm div:nth-child(5) input{
+    width: 10% ;
+    
+}
+
+#appointmentForm div:nth-child(5){
+    padding-top: 20px;
+}
