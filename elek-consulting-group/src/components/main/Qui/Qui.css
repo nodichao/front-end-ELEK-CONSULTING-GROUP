@@ -30,11 +30,28 @@
 
 .desc1{
     margin-left: 8%;
+    margin-top: 3%;
 }
 .desc1,.desc2{
     width: 40%;
+    /*border: 1px solid red;*/
 }
 .description{
     display: flex;
     justify-content: space-around;
+}
+
+@media screen and (max-width:930px){
+    .description{
+        display: block;
+    }
+    .desc1,.desc2{
+        margin: 0 auto;
+    }
+    .desc1 p{
+        max-height: 100%;
+    }
+    .desc1 button{
+        display: none;
+    }
 }

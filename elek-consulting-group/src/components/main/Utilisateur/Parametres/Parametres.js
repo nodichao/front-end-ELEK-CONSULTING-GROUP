@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./Parametres.css";
 import { toast } from "react-toastify";
 export function Parametres() {
@@ -57,11 +57,7 @@ export function Parametres() {
     }
   };
 
-  /*useEffect(
-    ()=>{
-        console.log(descPro);
-    },[descPro]
-   );*/
+  
   const handleSelfInfo = async (e) => {
     e.preventDefault();
     
@@ -161,9 +157,6 @@ export function Parametres() {
     return element;
    }
 
-  /*useEffect(()=>{
-   console.log(newPass);
-  },[newPass])*/
   
   const handleCareer =async (e)=>{
        e.preventDefault();
@@ -183,7 +176,7 @@ export function Parametres() {
         document.getElementById('descProError').innerText=''
 
        }
-
+      // console.log(profession, descPro);
        try {
         const response = await fetch(
           `http://localhost:5000/api/user/${userObject._id}`,

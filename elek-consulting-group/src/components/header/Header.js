@@ -21,8 +21,14 @@ export function Header() {
           </ul>
         </div>
         <div id="buttons" className="buttons nav3">
-        <Link to="/connexion" style={{textDecoration:'none'}}><button >se connecter</button></Link>
-        <Link to="/inscription" style={{textDecoration:'none'}}><button style={{backgroundColor:'black',color:'white'}}>s'inscrire</button></Link>
+          <Link to="/connexion" style={{ textDecoration: "none" }}>
+            <button>se connecter</button>
+          </Link>
+          <Link to="/inscription" style={{ textDecoration: "none" }}>
+            <button style={{ backgroundColor: "black", color: "white" }}>
+              s'inscrire
+            </button>
+          </Link>
         </div>
       </nav>
     </>

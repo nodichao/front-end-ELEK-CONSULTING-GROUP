@@ -1,0 +1,7 @@
+.articles{
+    font-family: "Maven Pro";
+}
+
+.articlesList tr,.articlesList td,.articlesList th{
+    border: 1px solid black;
+}

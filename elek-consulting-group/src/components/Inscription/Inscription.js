@@ -75,22 +75,8 @@ export function Inscription() {
       stylingFunction(lastNameError);
       stylingFunction(confirmPasswordError);
       
-      //emailError = stylingFunction(emailError);
-      /*let ErrorMessages =Object.values(err);
-      ErrorMessages.forEach(
-        function(error){
-          if(error!==''){
-            //console.log(error);
-            document.getElementById(ErrorMessages.indexOf(error).toString()).innerText=error;
-            document.getElementById(ErrorMessages.indexOf(error).toString()).style.fontSize="10px";
-          document.getElementById(ErrorMessages.indexOf(error).toString()).style.color='red';
-          document.getElementById(ErrorMessages.indexOf(error).toString()).style.fontFamily='Maven Pro';
-          document.getElementById(ErrorMessages.indexOf(error).toString()).style.position='absolute';
-          document.getElementById(ErrorMessages.indexOf(error).toString()).style.width='200px';
-           
-          }
-        }
-      )*/
+      
+     
     }
   }
     

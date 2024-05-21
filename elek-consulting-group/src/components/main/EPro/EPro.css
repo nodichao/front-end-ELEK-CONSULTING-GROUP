@@ -1,0 +1,31 @@
+@media screen and (max-width:700px) {
+    .Unav{
+        position: fixed;
+        z-index: 1;
+        right: 0;
+        top: 150px;
+        width: 90%;
+        transition: 0.5s ease-in-out;
+        /*display: none;*/
+    }
+
+    .noUnav{
+        position: fixed;
+        z-index: 1;
+        right: 0;
+        top: 50px;
+        width: 50%;
+        right: -1000px;
+    }
+    .burgerHandler{
+        display: block;
+        position: fixed;
+        top: 50px;
+        right: 0;
+    }
+
+    .Ucontent{
+        width: 100%;
+    }
+    
+}

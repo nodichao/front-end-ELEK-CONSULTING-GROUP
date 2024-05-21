@@ -41,6 +41,7 @@
      color: yellow;
      font-size: 40px;
      margin-bottom: 30px;
+     margin-left: 40px;
  }
 
  .bTitle button{
@@ -54,27 +55,38 @@
      
  }
  
- .bTitle button:nth-child(1){
+ /*.bTitle button:nth-child(1){
      background-color: #EAEE11;
      font-family:'Maven Pro';
      height: 35px;
      border-radius:5px ;
      font-weight: bold;
- }
+ }*/
  
- .bTitle button:nth-child(2){
+ .bTitle button:nth-child(1){
      background-color: #000000;
      font-family:'Maven Pro';
      color: white;
      height: 35px;
      border-radius:5px ;
      font-weight: bold;
+    width: 50%;
      
  }
  
  button{
      /*margin: 2px;*/
      cursor: pointer;
+ }
+
+ @media screen and (max-width:500px) {
+    h1{
+        margin: 0;
+        
+    }
+    .bTitle button:nth-child(1){
+        width: 80%;
+    }
  }
  
  

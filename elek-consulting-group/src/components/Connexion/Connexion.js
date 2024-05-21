@@ -1,12 +1,14 @@
 import { Link,Navigate } from "react-router-dom";
 import { Footer } from "../footer/Footer";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import{toast} from "react-toastify"
 //import "./Connexion.css";
 
 export function Connexion() {
 
-  const [redirectToHome, setRedirectToHome] = useState(false);
-  const [data, setData] = useState(null);
+
+  const [data, setData] = useState('');
+  
   
   const submitHandler = async(e)=>{
     e.preventDefault();
@@ -40,9 +42,9 @@ export function Connexion() {
       
       console.log('La requête a réussi !');
        const responseData = await response.json();
-       //console.log(responseData);
+       console.log(responseData);
        setData(responseData);
-      setRedirectToHome(true);
+      
       
     } catch (err) {
       //console.log(err);
@@ -62,10 +64,43 @@ export function Connexion() {
     }
   }
   
-  if(redirectToHome){
+  /*if(data.role==='user'){
     localStorage.setItem('user',JSON.stringify(data));
     return <Navigate to={`/user`} />
+
+  }else if(data.role==='admin'){
+    localStorage.setItem('admin',JSON.stringify(data));
+    return <Navigate to={`/admin`} />
+
+  }else{
+    localStorage.setItem('pro',JSON.stringify(data));
+    return <Navigate to={`/pro`} />
+  }*/
+  switch(data.role){
+    case "user":
+      localStorage.setItem('user',JSON.stringify(data));
+      setTimeout(()=>
+        toast.success('connexion réussie',{theme:'dark'}),3000
+      )
+      return <Navigate to={`/user`} />
+    case "admin":
+      localStorage.setItem('admin',JSON.stringify(data));
+      setTimeout(()=>
+        toast.success('connexion réussie',{theme:'dark'}),3000
+      )
+      return <Navigate to={`/admin`} />
+    case "pro":
+      localStorage.setItem('pro',JSON.stringify(data));
+      setTimeout(()=>
+        toast.success('connexion réussie',{theme:'dark'}),3000
+      )
+      return <Navigate to={`/pro`} />
+      default:
+         console.log("erreur");
+         break;
   }
+
+
 
   return (
     <>
@@ -78,20 +113,20 @@ export function Connexion() {
                   <img src="/retour64.png" alt="retour" /> <span>retour</span>
                 </Link>
               </p>
-              <img src="/utilisateur512.png" alt="utilisateur" />
+              <img src="/utilisateur512.png" alt="utilisateur"  className="userLogo"/>
             </div>
             <div className="inner-form2">
               <h2>Connectez vous !</h2>
               <form id="LForm">
                 <div>
-                  <label>Login</label>
+                  <label>Login</label><br/>
                   <input type="email" placeholder="exemple@gmail.com" name="login"/>
                   <div id="loginError">
 
                   </div>
                 </div>
                 <div>
-                  <label>Password</label>
+                  <label>Password</label><br/>
                   <input type="password" placeholder="********" name="pass" />
                   <div id="passError">
 
@@ -99,7 +134,7 @@ export function Connexion() {
                 </div>
                 <div>
                   <button onClick={submitHandler}>connexion</button>
-                  <a href="/#">Mot de passe oublié ?</a>
+                  {/*<a href="/#">Mot de passe oublié ?</a>*/}
                 </div>
               </form>
             </div>

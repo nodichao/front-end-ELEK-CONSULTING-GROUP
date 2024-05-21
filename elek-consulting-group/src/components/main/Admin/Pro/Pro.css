@@ -1,0 +1,40 @@
+.Pros,.modifyPro{
+    /*border: 1px solid red;*/
+}
+
+.Pros tr,.Pros td,.Pros th{
+    border: 1px solid black;
+}
+.Pros{
+    
+    /*justify-content: space-between;
+    flex-wrap: wrap;*/
+}
+
+
+
+.proList{
+    /*border: 1px solid red;*/
+    
+    
+}
+
+.addPro{
+    width: 70%;
+    /*border: 1px solid black;*/
+    border-radius: 15px;
+    margin-top: 50px;
+    padding-left: 2%;
+    box-shadow: 1px 1px 5px;
+   
+}
+
+
+.addPro form div:nth-child(3){
+    display: block;
+    margin-top: 0;
+}
+
+.addPro form input[type="radio"]{
+    width: 4%;
+}

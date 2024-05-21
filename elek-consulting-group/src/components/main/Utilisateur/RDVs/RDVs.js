@@ -100,6 +100,7 @@ export function RDVs() {
       const responseData = await response.json();
       console.log(responseData);
       toast.success('Demande effectuée',{theme:'dark'});
+      window.location.reload();
       //userObject = responseData;
       //console.log(userObject);
       //localStorage.setItem("user", JSON.stringify(userObject));
@@ -297,7 +298,7 @@ export function RDVs() {
         <div className="inner-rdv2">
           <h3>Rendez-vous à venir</h3>
           <p style={{ color: "gray" }}>{RDVs.length} rendez-vous</p>
-          {(<table style={{ borderCollapse: "collapse", width: "100%" }}>
+          {(<table style={{ borderCollapse: "collapse", width: "90%" }}>
             <thead>
               <tr>
                 <th>Date</th>

@@ -10,7 +10,7 @@ export function Nous() {
         <div className="email">
           <p>
             <img src="../../../email.png" alt="email" />
-            <span>josephhenrinodichao@gmail.com</span>
+            <span>&nbsp; josephhenrinodichao@gmail.com</span>
           </p>
         </div>
         <div className="addcell">

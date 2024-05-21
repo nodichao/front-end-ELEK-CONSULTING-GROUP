@@ -1,0 +1,8 @@
+.MCanevas input{
+    width: 50%;
+}
+.MCanevas form{
+    padding: 1%;
+    margin: 1%;
+    box-shadow: 1px 1px 5px;
+}

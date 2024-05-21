@@ -4,8 +4,17 @@
 }
 .inner-canevas{
     /*border: 1px solid black;*/
-    margin: 0 1%;
+    margin: 0 1.5%;
+    width: 30%;
 }
 .all-canevas{
     display: flex;
+    /*border: 1px solid red;*/
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width:700px) {
+    .all-canevas{
+        flex-direction: column;
+    }
 }

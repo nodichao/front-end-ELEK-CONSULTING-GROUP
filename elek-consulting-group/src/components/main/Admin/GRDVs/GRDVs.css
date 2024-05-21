@@ -1,0 +1,6 @@
+.GRDVs{
+    /*border: 1px solid red;*/
+}
+.GRDVs tr,.GRDVs td,.GRDVs th{
+    border: 1px solid black;
+}

@@ -68,3 +68,10 @@
     border-radius: 5px;
     font-weight: bold;
 }
+
+@media screen and (max-width:900px) {
+    .menu ul{
+        display: none;
+    }
+}
+

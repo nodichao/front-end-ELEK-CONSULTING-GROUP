@@ -15,7 +15,14 @@ import { Canevas } from "./components/main/Utilisateur/Canevas/Canevas";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { RDVs } from "./components/main/Utilisateur/RDVs/RDVs";
-
+import  {Admin}  from "./components/main/Admin/Admin";
+import { Articles } from "./components/main/Admin/Articles/Articles";
+import { GRDVs } from "./components/main/Admin/GRDVs/GRDVs";
+import { Pro } from "./components/main/Admin/Pro/Pro";
+import ProtectedRoute from "./components/ProtectedRoutes";
+import { EPro } from "./components/main/EPro/EPro";
+import { MRDVs } from "./components/main/EPro/MRDVs/MRDVs";
+import { MCanevas } from "./components/main/EPro/MCanevas/MCanevas";
 
 
 
@@ -36,7 +43,8 @@ const router = createBrowserRouter([
         element:<Inscription/>
       },{
         path:'/user',
-        element:<Utilisateur/>,
+
+        element:<ProtectedRoute><Utilisateur/></ProtectedRoute>,
         children:[
           {
             path:'Blog',
@@ -53,9 +61,52 @@ const router = createBrowserRouter([
           {
             path:'Parametres',
             element:<Parametres/>
+          },
+         /* {
+            path:'Reunion',
+            element:<Reunion/>
+          },*/
+          {
+            index: true, 
+            element: <Navigate to="Blog" replace />
+          }
+        ]
+      },{
+        path:'/admin',
+        element:<ProtectedRoute><Admin/></ProtectedRoute>,
+        children:[
+          {
+            path:'Articles',
+            element:<Articles/>
+          }
+          ,{
+            path:'Pro',
+            element:<Pro/>
           },{
-            path:'/user/*',
-            element:<Navigate to='/user/Blog' replace/>
+            path:'GRDVs',
+            element:<GRDVs/>
+          },
+          {
+            index: true, 
+            element: <Navigate to="GRDVs" replace />
+          }
+        ]
+      },
+      {
+        path:'/pro',
+        element:<ProtectedRoute><EPro/></ProtectedRoute>,
+        children:[
+          {
+            path:'MRDVs',
+            element:<MRDVs/>
+          }
+          ,{
+            path:'MCanevas',
+            element:<MCanevas/>
+          },
+          {
+            index: true, 
+            element: <Navigate to="MRDVs" replace />
           }
         ]
       }

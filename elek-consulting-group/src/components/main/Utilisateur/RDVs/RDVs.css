@@ -44,3 +44,16 @@
 #appointmentForm div:nth-child(5){
     padding-top: 20px;
 }
+
+@media screen and (max-width:700px) {
+    .RDVs{
+        flex-direction: column-reverse;
+    }
+    .inner-rdv1,.inner-rdv2{
+        width: 100%;
+    }
+
+    .inner-rdv2{
+        margin-bottom: 25px;
+    }
+}

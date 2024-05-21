@@ -5,6 +5,11 @@
     width: 98%;
     
 }
-
+@media screen and (max-width:900px){
+    .main{
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
 
 

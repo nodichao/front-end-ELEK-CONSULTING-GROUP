@@ -17,17 +17,12 @@ export function Qui(){
               <h3>Qui sommes nous ?</h3>
               <div className='description'>
                    <div className='desc desc1'>
-                    <p id='desc1-text' style={{maxHeight: afficheText?'100%':'40%'}}>
-                    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                     doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-                      veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim
-                       ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-                        consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque
-                         porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, 
-                         adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore
-                           qui dolorem eum fugiat quo voluptas nulla pariatur?"
-                           adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore
-                           qui dolorem eum fugiat quo voluptas nulla pariatur?"
+                    <p id='desc1-text' style={{maxHeight: afficheText?'100%':'20%'}}>
+                    ELEK CONSULTING GROUP est une agence de conseil et d'orientation en
+                     reconversion professionnelle spécialisée dans les métiers du numérique. 
+                     Elle accompagne les professionnels et les étudiants dans la définition
+                      et la mise en œuvre de leur projet professionnel en leur offrant une 
+                      orientation personnalisée et un accès privilégié aux formations adaptées.
                     </p>
                     <button id='plus' onClick={afficherPlus}>
                               {afficheText?"Voir Moins":"Voir Plus"}

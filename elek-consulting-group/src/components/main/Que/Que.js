@@ -21,16 +21,19 @@ export function Que(){
                    </div>
                    <div className='act act1'>
                     <p id='act1-text' style={{maxHeight: afficheText?'100%':'40%'}}>
-                    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                     doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-                      veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim
-                       ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-                        consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque
-                         porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, 
-                         adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore
-                           qui dolorem eum fugiat quo voluptas nulla pariatur?"
-                           adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore
-                           qui dolorem eum fugiat quo voluptas nulla pariatur?"
+                    Notre agence de consultance et d'orientation professionnelle se 
+                    spécialise dans l'accompagnement des professionnels souhaitant se
+                     reconvertir dans le secteur de la technologie. Nous comprenons les
+                      défis et les aspirations de ceux qui cherchent à donner une nouvelle
+                       direction à leur carrière, et nous sommes là pour faciliter cette
+                        transition de manière fluide et efficace.
+                        Nous mettons en relation nos clients avec des mentors expérimentés
+                         dans les domaines technologiques qu'ils aspirent à intégrer. Ces mentors
+                          apportent un soutien personnalisé, partagent leur expertise et fournissent 
+                          des conseils précieux pour aider nos clients à naviguer dans leur nouvelle 
+                          carrière. Que vous soyez intéressé par le développement web, la data science,
+                           la cybersécurité ou tout autre domaine technologique, nous avons les ressources
+                            pour vous connecter avec les bons experts.
                     </p>
                     <button id='plus' onClick={afficherPlus}>
                               {afficheText?"Voir Moins":"Voir Plus"}
