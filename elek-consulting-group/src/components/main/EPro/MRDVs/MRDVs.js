@@ -127,6 +127,7 @@ export function MRDVs() {
                 <th>Téléphone</th>
                 <th>Date</th>
                 <th>Heure</th>
+                <th>Lieu</th>
                 <th>Note</th>
                 <th>Statut</th>
                 <th>Action</th>
@@ -145,6 +146,7 @@ export function MRDVs() {
                       {parseInt(rdv.date.slice(11, 13)) + 2}
                       {rdv.date.slice(13, 16)}
                     </td>
+                    <td>Thiaroye Azur, sepco 1, n 128</td>
                     <td>{rdv.note}</td>
                     <td>{rdv.status}</td>
                     <td>

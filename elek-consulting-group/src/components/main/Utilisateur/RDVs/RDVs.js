@@ -303,6 +303,7 @@ export function RDVs() {
               <tr>
                 <th>Date</th>
                 <th>Heure</th>
+                <th>Lieu</th>
                 <th>Mentor</th>
                 <th>Statut</th>
                 <th>Action</th>
@@ -313,6 +314,7 @@ export function RDVs() {
                 <tr key={rdv._id}>
                 <td>{rdv.date.substring(0,10)}</td>
                 <td>{(parseInt(rdv.date.slice(11,13))+2).toString()}{rdv.date.slice(13,16)}</td>
+                <td>Thiaroye Azur, sepco 1, n 128</td>
                 <td>{rdv.pro.firstName} {rdv.pro.lastName} {rdv.pro.profession}</td>
                 <td>{rdv.status}</td>
                 <td>
