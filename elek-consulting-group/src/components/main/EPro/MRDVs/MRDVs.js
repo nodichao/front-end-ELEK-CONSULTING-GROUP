@@ -10,7 +10,7 @@ export function MRDVs() {
   const getMRDVs = async () => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/pro/rdv/${proObject._id}`,
+        `https://elek-consulting-group-server-side.vercel.app/api/pro/rdv/${proObject._id}`,
         {
           method: "GET",
           credentials: "include",
@@ -38,7 +38,7 @@ export function MRDVs() {
     const rdv = MRDVs.find((rdv) => rdv._id === id);
     console.log(rdv);
     try {
-      const response = await fetch(`http://localhost:5000/api/rdv/${id}`, {
+      const response = await fetch(`https://elek-consulting-group-server-side.vercel.app/api/rdv/${id}`, {
         method: "PUT",
         credentials: "include",
         body: JSON.stringify({ ...rdv, status: "accepté" }),
@@ -64,7 +64,7 @@ export function MRDVs() {
     const rdv = MRDVs.find((rdv) => rdv._id === id);
     //console.log(rdv);
     try {
-      const response = await fetch(`http://localhost:5000/api/rdv/${id}`, {
+      const response = await fetch(`https://elek-consulting-group-server-side.vercel.app/api/rdv/${id}`, {
         method: "PUT",
         credentials: "include",
         body: JSON.stringify({ ...rdv, status: "annulé" }),
@@ -88,7 +88,7 @@ export function MRDVs() {
 
   const deleteRDV = async (id) => {
     try {
-        const response = await fetch(`http://localhost:5000/api/rdv/${id}`, {
+        const response = await fetch(`https://elek-consulting-group-server-side.vercel.app/api/rdv/${id}`, {
         method: "DELETE",
         credentials: "include"
       });

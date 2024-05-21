@@ -53,7 +53,7 @@ export function Pro() {
 
   const getPros = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/api/pro`, {
+      const response = await fetch(`https://elek-consulting-group-server-side.vercel.app/api/pro`, {
         method: "GET",
         credentials: "include",
       });
@@ -139,7 +139,7 @@ export function Pro() {
     //console.log({prenom,nom,email,pass,confirmPass,phone,profession});
 
     try {
-      const response = await fetch("http://localhost:5000/api/user", {
+      const response = await fetch("https://elek-consulting-group-server-side.vercel.app/api/user", {
         method: "POST",
         body: JSON.stringify({
           firstName: prenom,
@@ -180,7 +180,7 @@ export function Pro() {
 
   const deletePro = async (id) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/user/${id}`, {
+      const response = await fetch(`https://elek-consulting-group-server-side.vercel.app/api/user/${id}`, {
         method: "DELETE",
         credentials: "include",
       });

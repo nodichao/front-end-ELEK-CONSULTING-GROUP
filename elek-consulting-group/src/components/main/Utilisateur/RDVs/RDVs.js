@@ -79,7 +79,7 @@ export function RDVs() {
     console.log(domaine);
 
     try {
-      const response = await fetch(`http://localhost:5000/api/rdv/${userObject._id}`, {
+      const response = await fetch(`https://elek-consulting-group-server-side.vercel.app/api/rdv/${userObject._id}`, {
         method: "POST",
         credentials: "include",
         body: JSON.stringify({
@@ -120,7 +120,7 @@ export function RDVs() {
   const getRDVs = async () => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/rdv/${userObject._id}`,
+        `https://elek-consulting-group-server-side.vercel.app/api/rdv/${userObject._id}`,
         {
           method: "GET",
           credentials: "include",
@@ -148,7 +148,7 @@ export function RDVs() {
     
     try {
       const response = await fetch(
-        `http://localhost:5000/api/rdv/${id}`,
+        `https://elek-consulting-group-server-side.vercel.app/api/rdv/${id}`,
         {
           method: "DELETE",
           credentials: "include",
