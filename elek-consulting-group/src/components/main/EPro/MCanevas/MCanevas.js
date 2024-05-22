@@ -22,7 +22,7 @@ const handlePDF = (e)=>{
     formData.append('pdf', pdf);
 
     try {
-      const response = await fetch('https://front-end-elek-consulting-group.vercel.app/upload', {
+      const response = await fetch('http://localhost:5000/upload', {
         method: 'POST',
         body: formData
       });

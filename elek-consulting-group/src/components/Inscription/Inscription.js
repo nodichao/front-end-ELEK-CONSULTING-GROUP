@@ -34,7 +34,7 @@ export function Inscription() {
    const phone_number = form.phone_number.value;
    
    try {
-        const response = await fetch('https://front-end-elek-consulting-group.vercel.app/api/user', {
+        const response = await fetch('http://localhost:5000/api/user', {
         method: 'POST',
         body: JSON.stringify({ firstName,lastName, email, password, phone_number }),
         headers: { 'Content-Type': 'application/json' }
