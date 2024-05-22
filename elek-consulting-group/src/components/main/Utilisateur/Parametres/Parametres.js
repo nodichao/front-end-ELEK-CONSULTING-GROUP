@@ -64,7 +64,7 @@ export function Parametres() {
 
     try {
       const response = await fetch(
-        `https://elek-consulting-group-server-side.vercel.app/api/user/${userObject._id}`,
+        `https://front-end-elek-consulting-group.vercel.app/api/user/${userObject._id}`,
         {
           method: "PUT",
           credentials: "include",
@@ -119,7 +119,7 @@ export function Parametres() {
 
     try {
         const response = await fetch(
-          `https://elek-consulting-group-server-side.vercel.app/api/user/password/${userObject._id}`,
+          `https://front-end-elek-consulting-group.vercel.app/api/user/password/${userObject._id}`,
           {
             method: "PUT",
             credentials: "include",
@@ -179,7 +179,7 @@ export function Parametres() {
       // console.log(profession, descPro);
        try {
         const response = await fetch(
-          `https://elek-consulting-group-server-side.vercel.app/api/user/${userObject._id}`,
+          `https://front-end-elek-consulting-group.vercel.app/api/user/${userObject._id}`,
           {
             method: "PUT",
             credentials: "include",

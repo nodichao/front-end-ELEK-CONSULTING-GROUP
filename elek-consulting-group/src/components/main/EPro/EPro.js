@@ -21,7 +21,7 @@ export function EPro() {
 
   const logoutHandler = async () => {
     try {
-      const response = await fetch("https://elek-consulting-group-server-side.vercel.app/api/user_logout", {
+      const response = await fetch("https://front-end-elek-consulting-group.vercel.app/api/user_logout", {
         method: "GET",
         credentials: "include",
       });

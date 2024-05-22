@@ -5,7 +5,7 @@ export function GRDVs() {
 
   const getRDVs = async () => {
     try {
-      const response = await fetch(`https://elek-consulting-group-server-side.vercel.app/api/rdv`, {
+      const response = await fetch(`https://front-end-elek-consulting-group.vercel.app/api/rdv`, {
         method: "GET",
         credentials: "include",
       });

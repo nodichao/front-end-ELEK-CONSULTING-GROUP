@@ -18,7 +18,7 @@ export function Blog(props) {
 
   const getArticles = async () => {
     try {
-      const response = await fetch("https://elek-consulting-group-server-side.vercel.app/api/article", {
+      const response = await fetch("https://front-end-elek-consulting-group.vercel.app/api/article", {
         method: "GET",
         credentials: "include",
       });
@@ -54,7 +54,7 @@ export function Blog(props) {
             <div className="BArticle1" key={index} >
               <div className="BImage">
               <h2>{article.title}</h2>
-                <img src={`https://elek-consulting-group-server-side.vercel.app/uploads/${article.image}`} alt="blogImage" />
+                <img src={`https://front-end-elek-consulting-group.vercel.app/uploads/${article.image}`} alt="blogImage" />
               </div>
               
 

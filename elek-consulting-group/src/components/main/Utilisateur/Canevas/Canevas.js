@@ -8,7 +8,7 @@ export function Canevas() {
   const getCanevas = async () => {
     try {
       const response = await fetch(
-        `https://elek-consulting-group-server-side.vercel.app/api/canevas/${userObject._id}`,
+        `https://front-end-elek-consulting-group.vercel.app/api/canevas/${userObject._id}`,
         {
           method: "GET",
           credentials: "include",
@@ -54,11 +54,11 @@ export function Canevas() {
               <div className="inner-canevas" key={index}>
                 <h3 style={{ fontFamily: "Maven Pro" }}>{canevas.name}</h3>
                 <embed
-                  src={`https://elek-consulting-group-server-side.vercel.app/uploads/${canevas.name}`}
+                  src={`https://front-end-elek-consulting-group.vercel.app/uploads/${canevas.name}`}
                   type="application/pdf"
                 />
                 <br />
-                <a href={`https://elek-consulting-group-server-side.vercel.app/uploads/${canevas.name}`} download target="_blank" rel="noreferrer">
+                <a href={`https://front-end-elek-consulting-group.vercel.app/uploads/${canevas.name}`} download target="_blank" rel="noreferrer">
                   Télécharger le PDF
                 </a>
               </div>

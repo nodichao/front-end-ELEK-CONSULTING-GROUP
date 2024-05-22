@@ -25,7 +25,7 @@ export function Connexion() {
    
    
    try {
-        const response = await fetch('https://elek-consulting-group-server-side.vercel.app/api/login', {
+        const response = await fetch('https://front-end-elek-consulting-group.vercel.app/api/login', {
         method: 'POST',
         credentials: 'include',
         body: JSON.stringify({ email:login, password:pass }),

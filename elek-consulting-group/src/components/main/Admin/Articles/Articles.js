@@ -32,7 +32,7 @@ export function Articles() {
     form.append("id", adminObject._id);
 
     try {
-      const response = await fetch("https://elek-consulting-group-server-side.vercel.app/article/upload", {
+      const response = await fetch("https://front-end-elek-consulting-group.vercel.app/article/upload", {
         method: "POST",
         body: form,
       });
@@ -51,7 +51,7 @@ export function Articles() {
 
   const getArticles = async () => {
     try {
-      const response = await fetch(`https://elek-consulting-group-server-side.vercel.app/api/article`, {
+      const response = await fetch(`https://front-end-elek-consulting-group.vercel.app/api/article`, {
         method: "GET",
         credentials: "include",
       });
@@ -79,7 +79,7 @@ export function Articles() {
     const formData = new FormData(this);
 
     try {
-      const response = await fetch("https://elek-consulting-group-server-side.vercel.app/article/upload/", {
+      const response = await fetch("https://front-end-elek-consulting-group.vercel.app/article/upload/", {
         method: "POST",
         body: formData,
       });
