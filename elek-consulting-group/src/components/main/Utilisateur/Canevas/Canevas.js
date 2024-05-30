@@ -8,7 +8,7 @@ export function Canevas() {
   const getCanevas = async () => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/canevas/${userObject._id}`,
+        `https://elek-consulting-group-server-side.onrender.com/api/canevas/${userObject._id}`,
         {
           method: "GET",
           credentials: "include",
@@ -34,7 +34,7 @@ export function Canevas() {
   useEffect(() => {
     getCanevas();
     console.log(canevas);
-  }, [canevas]);
+  }, []);
 
   /*const handleCanevas = ()=>{
         console.log('nouveau canevas');
@@ -54,11 +54,11 @@ export function Canevas() {
               <div className="inner-canevas" key={index}>
                 <h3 style={{ fontFamily: "Maven Pro" }}>{canevas.name}</h3>
                 <embed
-                  src={`http://localhost:5000/uploads/${canevas.name}`}
+                  src={`https://elek-consulting-group-server-side.onrender.com/uploads/${canevas.name}`}
                   type="application/pdf"
                 />
                 <br />
-                <a href={`http://localhost:5000/uploads/${canevas.name}`} download target="_blank" rel="noreferrer">
+                <a href={`https://elek-consulting-group-server-side.onrender.com/uploads/${canevas.name}`} download target="_blank" rel="noreferrer">
                   Télécharger le PDF
                 </a>
               </div>

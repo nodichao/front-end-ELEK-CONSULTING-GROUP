@@ -64,7 +64,7 @@ export function Parametres() {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/user/${userObject._id}`,
+        `https://elek-consulting-group-server-side.onrender.com/api/user/${userObject._id}`,
         {
           method: "PUT",
           credentials: "include",
@@ -119,7 +119,7 @@ export function Parametres() {
 
     try {
         const response = await fetch(
-          `http://localhost:5000/api/user/password/${userObject._id}`,
+          `https://elek-consulting-group-server-side.onrender.com/api/user/password/${userObject._id}`,
           {
             method: "PUT",
             credentials: "include",
@@ -179,7 +179,7 @@ export function Parametres() {
       // console.log(profession, descPro);
        try {
         const response = await fetch(
-          `http://localhost:5000/api/user/${userObject._id}`,
+          `https://elek-consulting-group-server-side.onrender.com/api/user/${userObject._id}`,
           {
             method: "PUT",
             credentials: "include",

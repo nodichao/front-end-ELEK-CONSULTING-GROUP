@@ -5,7 +5,7 @@ export function GRDVs() {
 
   const getRDVs = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/api/rdv`, {
+      const response = await fetch(`https://elek-consulting-group-server-side.onrender.com/api/rdv`, {
         method: "GET",
         credentials: "include",
       });
